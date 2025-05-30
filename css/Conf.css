@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    margin:0px;
+    padding:0px;
+    background-color: black;
+}
+
+body{
+    color: white;
+}
+
+h1{
+    font-family: 'Audiowide', cursive;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2{
+    font-family: 'Audiowide', cursive;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p{
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+a{
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
