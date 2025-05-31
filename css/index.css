@@ -1,86 +1,299 @@
-/* configurações do body */
-body{
-    font-family: "audiowide", sans-serif;
-    background-color: #1f1f1f;
-    margin: 0;
-    padding: 20px;
+/* =========================== */
+/*        CONFIGURAÇÃO        */
+/* =========================== */
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: "audiowide", sans-serif;  /* Fonte principal do site */
+    background-color: #1f1f1f;             /* Cor de fundo escura */
+    margin: 0;                             /* Remove margem externa padrão */
+    padding: 20px;                         /* Espaçamento interno ao redor do conteúdo */
 }
-/* define seções no centro da tela*/
-section{
-   margin: 0 auto;
+
+/* Centraliza as seções horizontalmente */
+section {
+    margin: 0 auto;
 }
-/*  define cor, alinhamento e fonte de todos os tipos de h do 1 ao 6. */
-h1{
+
+/* =========================== */
+/*        TÍTULOS H1-H6       */
+/* =========================== */
+
+/* Estilo específico para h1 */
+h1 {
     font-family: "audiowide", sans-serif;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
 }
-h2, h3, h4, h5, h6{
+
+/* Estilo para os demais títulos (h2 até h6) */
+h2, h3, h4, h5, h6 {
     font-family: "Josefin", sans-serif;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
 }
 
-/* define cor, alinhamento e fonte e 10px de margin acima do p */
+/* =========================== */
+/*        PARÁGRAFOS          */
+/* =========================== */
+
+/* Estilo para os parágrafos <p> */
 p {
     font-family: "josefin sans", sans-serif;
     text-align: center;
     color: #ffffff;
-    margin-top: 10px;
-}
-/* define cor, alinhamento e fonte  e decoração nula dos links*/
-a {
-    font-family: "josefin sans", sans-serif;
-    text-align: center;
-    color: #ffffff;
-    text-decoration: none;
-    /* borda neon */
-    border: 1px solid transparent;
-    text-shadow: 2px 2px  #4C9A8A;
+    margin-top: 10px;  /* Espaço acima do parágrafo */
 }
 
-/* define o display e margin contral da imagem */
+/* =========================== */
+/*        LINKS <a>           */
+/* =========================== */
+
+a {
+    font-family: "Josefin Sans", sans-serif;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;  /* Remove o sublinhado padrão */
+
+    /* Borda invisível mas usada pra efeitos de hover */
+    border: 1px solid transparent;
+
+    /* Sombra do texto com tom azul-esverdeado transparente */
+    text-shadow: 2px 2px #4c9a8a85;
+
+    /* Fundo escuro, mas levemente mais claro que o fundo principal */
+    background-color: #2b2b2b;
+
+    /* Espaçamento interno e cantos arredondados */
+    padding: 10px 20px;
+    border-radius: 6px;
+
+    /* Brilho suave ao redor do botão */
+    box-shadow: 0 0 8px #4C9A8A44, 0 0 16px #4C9A8A33;
+
+    /* Transição suave em hover */
+    transition: all 0.3s ease;
+}
+
+/* Efeito visual ao passar o mouse sobre os links */
+a:hover {
+    background-color: #4C9A8A; /* Cor viva */
+    color: #1f1f1f;            /* Cor escura para contraste */
+    box-shadow: 0 0 12px #4C9A8A, 0 0 24px #4C9A8A; /* Brilho mais forte */
+}
+
+/* =========================== */
+/*         IMAGENS            */
+/* =========================== */
+
+/* Centraliza imagens e arredonda as bordas */
 img {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
 }
-/* legenda */
+
+/* Estilo da legenda */
 legend {
     font-family: "josefin sans", sans-serif;
+    font-size: larger;
     text-align: center;
     color: #ffffff;
 }
 
-/*classes e Id's */
+/* =========================== */
+/*     CLASSES PERSONALIZADAS */
+/* =========================== */
 
-.destNeonRed{
+/* Texto com sombra vermelha estilo "neon" */
+.destNeonRed {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
     color: #ffffff;
-
-    text-shadow: 2px 2px  red;
+    text-shadow: 2px 2px red;
 }
-.mrcred{
+
+/* Botão ou destaque vermelho */
+.mrcred {
     font-family: 'Instrument Sans', sans-serif;
     color: #ffffff;
-    background-color:  #e73737;
-    border-color: 2px solid #ff0000;
+    background-color: #e73737;
+    border: 2px solid #ff0000; /* <- Detalhe: isso deveria ser `border: 2px solid #ff0000;` */
     border-radius: 8px;
 }
 
-.hsnobold{
+/* Fonte com peso mais forte */
+.hsnobold {
     font-weight: 800;
 }
 
-#Not{
+/* =========================== */
+/*         IDs                */
+/* =========================== */
+
+/* Define largura específica para um container */
+#Not {
     width: 600px;
 }
-#noticia{
+
+/* Caixa de notícia com padding, sombra e borda arredondada */
+#noticia {
     background-color: #1f1f1f;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilo para um rodapé ou aviso com amarelo */
+#copy {
+    color: #ffff7a;
+    text-shadow: 2px 1px #d5b06793;
+}
+
+
+
+/* Menu container */
+.menu {
+  position: relative;
+  background-color: #2b2b2b;
+  border: 2px solid #4C9A8A;
+  border-radius: 8px;
+  box-shadow:
+    0 0 8px #4C9A8A44,
+    0 0 16px #4C9A8A33;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/* Hamburger: só aparece em telas pequenas */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  padding: 10px 20px;
+  color: #4C9A8A;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Lista principal */
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Itens do menu */
+.menu-list > li {
+  position: relative;
+}
+
+/* Links do menu */
+.menu-list a {
+  display: block;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-shadow: 2px 2px #4c9a8a85;
+}
+
+/* Neon border só na borda (no hover e foco) */
+.menu-list a:hover,
+.menu-list a:focus {
+  border-color: #4C9A8A;
+  box-shadow:
+    0 0 12px #4C9A8A,
+    0 0 24px #4C9A8A;
+  color: #1f1f1f;
+  background-color: #4C9A8A;
+}
+
+/* Submenu escondido */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2b2b2b;
+  border: 2px solid #4C9A8A;
+  border-radius: 6px;
+  min-width: 150px;
+  box-shadow:
+    0 0 8px #4C9A8A44,
+    0 0 16px #4C9A8A33;
+  z-index: 10;
+}
+
+/* Submenu itens */
+.submenu li {
+  border-bottom: 1px solid #4C9A8A33;
+}
+
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+/* Submenu links */
+.submenu a {
+  padding: 8px 15px;
+  color: #ffffff;
+  text-shadow: none;
+  border: none;
+  background: none;
+  box-shadow: none;
+}
+
+/* Submenu links hover */
+.submenu a:hover,
+.submenu a:focus {
+  background-color: #4C9A8A;
+  color: #1f1f1f;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Mostrar submenu no hover do item pai - desktop */
+.menu-list > li:hover > .submenu {
+  display: block;
+}
+
+/* RESPONSIVO */
+
+/* Esconde o menu-list e mostra o toggle no mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-list {
+    flex-direction: column;
+    display: none; /* escondido por padrão */
+    width: 100%;
+  }
+
+  /* Itens do menu em coluna */
+  .menu-list > li {
+    width: 100%;
+  }
+
+  /* Mostrar submenu em coluna */
+  .submenu {
+    position: static;
+    border: none;
+    box-shadow: none;
+    background-color: #1f1f1f;
+    padding-left: 15px;
+  }
+
+  /* Submenu links */
+  .submenu a {
+    padding-left: 30px;
+  }
 }
