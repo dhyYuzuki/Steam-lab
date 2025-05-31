@@ -4,36 +4,14 @@
 *{
     margin:0px;
     padding:0px;
-    background-color: black;
 }
 
 body{
-    color: white;
+    width: 95vw;
 }
-
-h1{
-    font-family: 'Audiowide', cursive;
-    font-size: 50px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-h2{
-    font-family: 'Audiowide', cursive;
-    font-size: 30px;
-    text-align: center;
-    margin-top: 20px;
-}
-
 p{
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 20px;
-    text-align: center;
     margin-top: 10px;
 }
 a{
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 20px;
     text-decoration: none;
-    color: white;
 }

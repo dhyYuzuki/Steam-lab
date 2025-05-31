@@ -1,0 +1,86 @@
+/* configurações do body */
+body{
+    font-family: "audiowide", sans-serif;
+    background-color: #1f1f1f;
+    margin: 0;
+    padding: 20px;
+}
+/* define seções no centro da tela*/
+section{
+   margin: 0 auto;
+}
+/*  define cor, alinhamento e fonte de todos os tipos de h do 1 ao 6. */
+h1{
+    font-family: "audiowide", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+h2, h3, h4, h5, h6{
+    font-family: "Josefin", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* define cor, alinhamento e fonte e 10px de margin acima do p */
+p {
+    font-family: "josefin sans", sans-serif;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+}
+/* define cor, alinhamento e fonte  e decoração nula dos links*/
+a {
+    font-family: "josefin sans", sans-serif;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    /* borda neon */
+    border: 1px solid transparent;
+    text-shadow: 2px 2px  #4C9A8A;
+}
+
+/* define o display e margin contral da imagem */
+img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+/* legenda */
+legend {
+    font-family: "josefin sans", sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+/*classes e Id's */
+
+.destNeonRed{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    color: #ffffff;
+
+    text-shadow: 2px 2px  red;
+}
+.mrcred{
+    font-family: 'Instrument Sans', sans-serif;
+    color: #ffffff;
+    background-color:  #e73737;
+    border-color: 2px solid #ff0000;
+    border-radius: 8px;
+}
+
+.hsnobold{
+    font-weight: 800;
+}
+
+#Not{
+    width: 600px;
+}
+#noticia{
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
