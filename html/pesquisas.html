@@ -40,38 +40,41 @@
             <p>Esta página é dedicada a pesquisas e estudos realizados por Hiori Yo e Hayashi.</p>
             <p>Você pode encontrar informações sobre os projetos em andamento, resultados de pesquisas anteriores e muito mais.</p>
         </section>
-
         <section id="pesq-list">
-            <h3>Projetos Atuais:</h3>
+            <h3 class="inl">Projetos Atuais:</h3> <br>
             <ul>
                 <li>
-                    <a href="" class="noneon card">Estudo: Saúde e Sustentabilidade</a>
+                    <a href="../images/ranma.jpg" class="noneon card" target="tela">Estudo: Saúde e Sustentabilidade</a>
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
                 <li>
-                    <a href="" class="noneon">Estudo: Saúde e Acessibilidade</a> 
+                    <a href="../images/ranma.jpg" class="noneon" target="tela">Estudo: Saúde e Acessibilidade</a> 
                 </li>
             </ul>
+        </section>
+        <section id="viewer">
+            <iframe src="" frameborder="0"   id="tela"  name="tela"></iframe>
+            <span><button  id="fechar">X</button></span>
         </section>
 
     </main>
@@ -79,5 +82,29 @@
     <footer>
         <p style="font-size: larger;" id="copy">&copy; Esse Site foi desenvolvido e é admistrado por Hiori Yo e Hayashi</p>
     </footer>
+<script>
+const links = document.querySelectorAll('a[target="tela"]');
+const iframe = document.getElementById("tela");
+const fecharBtn = document.getElementById("fechar");
+const pesqList = document.getElementById("pesq-list");
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    iframe.style.display = "inline-block";  // mostra iframe
+    fecharBtn.style.display = "inline-block"; // mostra botão fechar
+    pesqList.style.display = "none";         // esconde lista
+  });
+});
+
+fecharBtn.addEventListener("click", () => {
+  iframe.src = "";                 // limpa conteúdo do iframe
+  iframe.style.display = "none";  // esconde iframe
+  fecharBtn.style.display = "none";  // esconde botão fechar
+  pesqList.style.display = "block";    // mostra lista de novo
+});
+
+
+</script>
+
 </body>
 </html>

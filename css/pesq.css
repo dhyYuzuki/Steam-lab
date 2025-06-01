@@ -218,6 +218,9 @@ legend {
 /*     CLASSES PERSONALIZADAS */
 /* =========================== */
 
+.inl{
+    display: inline;
+}
 
 /* =========================== */
 /*         IDs                */
@@ -230,3 +233,40 @@ legend {
 }
 
 
+
+#viewer {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: start;
+  margin-top: 30px;
+}
+
+#tela {
+  width: 600px;
+  height: 400px;
+  border: 2px solid #4C9A8A;
+  border-radius: 10px;
+  box-shadow: 0 0 16px #4C9A8A88;
+}
+
+#fechar {
+  height: 40px;
+  align-self: flex-start;
+  background-color: #1f1f1f;
+  color: #4C9A8A;
+  border: 1px solid #4C9A8A88;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 0 0 6px #4C9A8A;
+  cursor: pointer;
+  transition: all 0.3s ease;
+    display: none;
+}
+
+#fechar:hover {
+  background-color: #4C9A8A;
+  color: #1f1f1f;
+  box-shadow: 0 0 12px #4C9A8A, 0 0 24px #4C9A8A;
+}
