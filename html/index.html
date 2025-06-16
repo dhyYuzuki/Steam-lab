@@ -1,74 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steam Lab</title>
        <link rel="shortcut icon" href="favi.ico" type="image/x-icon">
        <link rel="stylesheet" href="../css/Conf.css">
-       <link rel="stylesheet" href="../css/menu.css">
        <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
-    <!-- Navegação e o titulo-->
-    <header>
-        <h1>&#x1F3EE;Bem Vindo Ao  Steam Lab&#x1F3EE;</h1>
+   <header>
+        <!-- Navegação e o titulo-->
+       <h1 id="title">&#x1F3EE;Bem Vindo Ao  Steam Lab&#x1F3EE;</h1>
       <nav class="menu">
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger -->
 
-  <ul class="menu-list">
-    <li><a href="index.html">Home</a></li>
-    <li>
-      <a href="#">Notícias &#x25BC;</a> <!-- seta pra baixo -->
-      <ul class="submenu">
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Tecnologia</a></li>
-        <li><a href="#">Entretenimento</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Galeria</a></li>
-    <li><a href="pesquisas.html">Pesquisas</a></li>
-    <li><a href="contato.html">Contato/creditos</a></li>
-  </ul>
-</nav>
-
-    </header>
-    <br>
-    <!-- Noticias, gif-->
-    <main>
-        <section id="Not">
-            <h2>Noticia de destaque da semana</h2><br>
-
-            <h2 class="">Demissões em massa por Trump permanecerão suspensas, decide tribunal</h2><br>
-
-            <h3 class="mrcred hsnobold">Caso foi movido por sindicatos de funcionários federais, governos locais e grupos externos; decisão é um revés para os esforços do presidente para reduzir o governo federal</h3><br>
-
-            <p id="noticia">
-                As diretrizes do presidente dos Estados Unidos Donald Trump para demissões em massa em diversas agências permanecerão suspensas, decidiu um tribunal federal de apelações nesta sexta-feira (30).
-               
-                O governo Trump havia solicitado ao Tribunal de Apelações do 9º Circuito dos EUA que congelasse a ordem de uma instância inferior que suspendeu as demissões em mais de uma dúzia de agências.
-
-                A nova ordem representa um grande revés para Trump em seus esforços para reduzir drasticamente o governo federal.
-            </p>
-
+          <div class="menu-toggle" id="menu-toggle"><p id="pmenuto">&#9776;</p></div>
+          <div id="boxmenu">
+              <ul class="menu-list">
+              
+                <li><a href="index.html" id="menuSizeone,  menuStart" class="conection">Home </a></li>
+                <li><a href="#" class="conection">Notícias &#x25BC;</a></li>
+                <li><a href="#" class="conection">Jogos</a></li>
+                <li><a href="#" class="conection">Comunidade</a></li>   
+                <li><a href="#" class="conection">Suporte</a></li>
+                <li><a href="#" class="conection">Configurações</a></li>
+                <li><a href="sobre.html" class="conection">Sobre</a></li>
+                <li><a href="contato.html" class="conection">Contato</a></li>
+              </ul>
+          </div>
+   </header>
+   <main>
+        <!-- Conteúdo Principal -->
+        <section class="aviso">
+            <h2>Aviso</h2>
+            <p style="font-size: small;">Esta página é dedicada a mostrar uma noticia,gif, ou outra coisa da cultura pop a vocês do Steam Lab.</p>
         </section>
-            <br>
-        <section id="notfont">
-
-            <p><a href="https://www.cnnbrasil.com.br/internacional/demissoes-em-massa-por-trump-permanecerao-suspensas-decide-tribunal/" target="_blank" rel="external">Acesse a Notícia no site da CNN.</a></p>
+        <section>
+            <h2>Notícias</h2>
+            <p>Em breve, você verá notícias emocionantes sobre jogos, atualizações e eventos do Steam Lab!</p>
         </section>
-        <br>
-
-        <section id="gif">
-
-            <img src="../images/Frieren-morning.gif" alt="Gif da semana"><br>
-
-            <legend><a href="https://tenor.com/pt-BR/view/morning-anime-elf-frieren-gif-4413475363987094937" target="_blank" rel="external">Link do Gif</a></legend>
-        </section>
-    </main><br>
-    <!--copy-->
-    <footer>
-        <p style="font-size: larger;" id="copy">&copy; Esse Site foi desenvolvido e é admistrado por Hiori Yo e Hayashi</p>
+        
+   </main>
+        <!-- Rodapé -->
+     <footer>
     </footer>
+
+    <script src="../js/menu-toggle.js"></script>
 </body>
 </html>

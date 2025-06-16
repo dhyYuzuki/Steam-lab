@@ -1,144 +1,68 @@
-/* Menu container */
-.menu {
-  position: relative;
-  background-color: #2b2b2b;
-  border: 2px solid #4C9A8A;
-  border-radius: 8px;
-  box-shadow:
-    0 0 8px #4C9A8A44,
-    0 0 16px #4C9A8A33;
-  max-width: 900px;
-  margin: 0 auto 20px auto;
-  font-family: "Josefin Sans", sans-serif;
-}
-
-/* Hamburger: só aparece em telas pequenas */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  padding: 10px 20px;
-  color: #4C9A8A;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Lista principal */
-.menu-list {
-  list-style: none;
+/* 🔘 Botão de menu circular com brilho neon */
+#pmenuto {
+  padding: 12px;
+  left: 5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* formato redondo */
+  background-color: var(--cfundo2);
+  color: var(--destaques);
+  border: 2px solid var(--destaques);
+  box-shadow: 0 0 20px 4px var(--destaques); /* brilho ao redor */
+  font-size: 1.3rem;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 20px;
-  margin: 0;
-  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative; /* Necessário para posicionar o menu corretamente */
 }
 
-/* Itens do menu */
-.menu-list > li {
-  position: relative;
+#pmenuto:hover {
+  background-color: var(--destaques);
+  color: var(--ctext);
 }
 
-/* Links do menu */
-.menu-list a {
-  display: block;
-  padding: 10px 15px;
-  color: #ffffff;
-  text-decoration: none;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-  text-shadow: 2px 2px #4c9a8a85;
-}
-
-/* Neon border só na borda (no hover e foco) */
-.menu-list a:hover,
-.menu-list a:focus {
-  border-color: #4C9A8A;
-  box-shadow:
-    0 0 12px #4C9A8A,
-    0 0 24px #4C9A8A;
-  color: #1f1f1f;
-  background-color: #4C9A8A;
-}
-
-/* Submenu escondido */
-.submenu {
-  display: none;
+/* 📦 Menu dropdown escondido por padrão */
+.menu-list {
+  display: none; /* escondido até clicar */
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 27%; /* abaixo do botão */
+  left: 2%; /* alinhado com o botão */
   background-color: #2b2b2b;
-  border: 2px solid #4C9A8A;
-  border-radius: 6px;
-  min-width: 150px;
-  box-shadow:
-    0 0 8px #4C9A8A44,
-    0 0 16px #4C9A8A33;
-  z-index: 10;
+  border-radius: 10px;
+  padding: 10px 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  min-width: 180px;
 }
 
-/* Submenu itens */
-.submenu li {
-  border-bottom: 1px solid #4C9A8A33;
-}
-
-.submenu li:last-child {
-  border-bottom: none;
-}
-
-/* Submenu links */
-.submenu a {
-  padding: 8px 15px;
-  color: #ffffff;
-  text-shadow: none;
-  border: none;
-  background: none;
-  box-shadow: none;
-}
-
-/* Submenu links hover */
-.submenu a:hover,
-.submenu a:focus {
-  background-color: #4C9A8A;
-  color: #1f1f1f;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-/* Mostrar submenu no hover do item pai - desktop */
-.menu-list > li:hover > .submenu {
+/* ✅ Classe ativada com JS (torna visível) */
+.menu-list.active {
   display: block;
 }
 
-/* RESPONSIVO */
-
-/* Esconde o menu-list e mostra o toggle no mobile */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .menu-list {
-    flex-direction: column;
-    display: none; /* escondido por padrão */
-    width: 100%;
-  }
-
-  /* Itens do menu em coluna */
-  .menu-list > li {
-    width: 100%;
-  }
-
-  /* Mostrar submenu em coluna */
-  .submenu {
-    position: static;
-    border: none;
-    box-shadow: none;
-    background-color: #1f1f1f;
-    padding-left: 15px;
-  }
-
-  /* Submenu links */
-  .submenu a {
-    padding-left: 30px;
-  }
+/* 🔹 Remove estilo padrão da lista */
+.menu-list li {
+  list-style: none;
 }
+
+/* 🔗 Estilo dos links do menu */
+.menu-list li a {
+  display: block;
+  padding: 12px 24px; /* aumenta área clicável */
+  color: var(--ctext);
+  text-decoration: none;
+  background-color: transparent;
+  transition: background 0.3s;
+  font-family: var(--font2);
+  font-size: 1rem;
+  min-width: 180px;
+}
+
+/* 🎯 Hover nos links do menu */
+.menu-list li a:hover {
+  background-color: var(--destaques);
+  color: var(--cfundo);
+}
+/* 📱 Ícones do menu */

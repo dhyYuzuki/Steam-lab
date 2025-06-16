@@ -1,0 +1,17 @@
+
+section {
+    height: 100px;
+}
+#sobresec{
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px var(--destaques);
+}
