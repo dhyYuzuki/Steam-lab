@@ -7,5 +7,25 @@
     font-size: 2.5rem;
     text-align: center;
     margin: 20px 0;
-    text-shadow: 5px 4px 5px var(--destaques);
+}
+
+.video{
+    background-color: var(--cfundo2);
+    margin:0px auto 30px auto;
+    padding: 20px  /* padding bottom to maintain aspect ratio */;
+    padding-bottom: 35%;
+    position: relative; 
+    width: 80%;
+    height: 10%;
+    border-radius: 10px;
+    
+}
+
+.video > iframe{
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  border-radius: 10px;
+  width: 80%;
+  height: 80%;
 }

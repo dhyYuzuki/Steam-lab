@@ -8,13 +8,13 @@
   background-color: var(--cfundo2);
   color: var(--destaques);
   border: 2px solid var(--destaques);
-  box-shadow: 0 0 20px 4px var(--destaques); /* brilho ao redor */
+  box-shadow: 0px 0px 5px 1px var(--destaques); /* brilho ao redor */
   font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: 0.3s ease;
+  cursor: progress;
+  transition: 0.3s ease-in;
   position: relative; /* Necessário para posicionar o menu corretamente */
 }
 
@@ -54,7 +54,7 @@
   color: var(--ctext);
   text-decoration: none;
   background-color: transparent;
-  transition: background 0.3s;
+  transition:  ease-out 0.3s;
   font-family: var(--font2);
   font-size: 1rem;
   min-width: 180px;
