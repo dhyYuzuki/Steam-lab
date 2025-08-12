@@ -1,68 +1,113 @@
-/* 🔘 Botão de menu circular com brilho neon */
+/* Container com posição pra segurar botão e menu */
+#boxmenu {
+  position: relative;
+  width: max-content;
+  left: 2%;
+}
+
+/* Botão do menu */
 #pmenuto {
+  position: relative;
   padding: 12px;
-  left: 5%;
+  left: 2%;
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* formato redondo */
+  border-radius: 50%;
   background-color: var(--cfundo2);
   color: var(--destaques);
   border: 2px solid var(--destaques);
-  box-shadow: 0px 0px 5px 1px var(--destaques); /* brilho ao redor */
+  box-shadow: 0 0 5px 1px var(--destaques);
   font-size: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: progress;
+  cursor: pointer;
   transition: 0.3s ease-in;
-  position: relative; /* Necessário para posicionar o menu corretamente */
 }
 
+/* Botão hover */
 #pmenuto:hover {
   background-color: var(--destaques);
   color: var(--ctext);
 }
 
-/* 📦 Menu dropdown escondido por padrão */
+/* Menu principal */
 .menu-list {
-  display: none; /* escondido até clicar */
+  display: none;
   position: absolute;
-  top: 27%; /* abaixo do botão */
-  left: 2%; /* alinhado com o botão */
+  top: 110%; /* logo abaixo do botão */
+  left: 0;
   background-color: #2b2b2b;
   border-radius: 10px;
   padding: 10px 0;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  min-width: 200px;
+  max-width: 240px;
   z-index: 999;
-  min-width: 180px;
+  overflow: hidden;
+  animation-fill-mode: forwards;
 }
 
-/* ✅ Classe ativada com JS (torna visível) */
+/* Ativa menu */
 .menu-list.active {
   display: block;
+  animation: slideDownBackground 0.5s ease forwards;
 }
 
-/* 🔹 Remove estilo padrão da lista */
+/* Itens do menu */
 .menu-list li {
   list-style: none;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInMenu 0.5s forwards ease;
 }
 
-/* 🔗 Estilo dos links do menu */
+/* Delay para animação dos itens */
+.menu-list.active li:nth-child(1) { animation-delay: 0.05s; }
+.menu-list.active li:nth-child(2) { animation-delay: 0.15s; }
+.menu-list.active li:nth-child(3) { animation-delay: 0.25s; }
+.menu-list.active li:nth-child(4) { animation-delay: 0.35s; }
+.menu-list.active li:nth-child(5) { animation-delay: 0.45s; }
+.menu-list.active li:nth-child(6) { animation-delay: 0.55s; }
+.menu-list.active li:nth-child(7) { animation-delay: 0.65s; }
+.menu-list.active li:nth-child(8) { animation-delay: 0.75s; }
+
+/* Links do menu */
 .menu-list li a {
   display: block;
-  padding: 12px 24px; /* aumenta área clicável */
+  padding: 12px 20px;
   color: var(--ctext);
   text-decoration: none;
-  background-color: transparent;
-  transition:  ease-out 0.3s;
   font-family: var(--font2);
   font-size: 1rem;
-  min-width: 180px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* 🎯 Hover nos links do menu */
 .menu-list li a:hover {
   background-color: var(--destaques);
   color: var(--cfundo);
 }
-/* 📱 Ícones do menu */
+
+/* Animações */
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownBackground {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
