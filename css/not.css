@@ -22,3 +22,37 @@
 .newsItem p {
     font-size: 14px;
 }
+
+.conectiontitle {
+    color: var(--ctext);
+    text-decoration: none;
+    transition-property: all;
+    transition: 0.3s;
+    font-size: 16pt;
+}
+
+
+.divtitle:hover > .conectiontitle{
+    transition-property: all;
+    color: var(--detalhes);
+    transition-duration: 0.3s;  
+    font-size: 18pt;
+
+}
+
+
+
+.baixar{
+    background: var(--detalhes);
+    color: var(--ctext3);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.baixar:hover {
+    transition-duration: 0.3s;
+    background: var(--destaques);
+    padding: 12px 17px ;
+}
