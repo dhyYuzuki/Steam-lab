@@ -52,3 +52,11 @@ p{
     margin: 10px 0;
 }
 
+footer{
+    background-color: var(--cfundo2);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: var(--ctext2);
+}
