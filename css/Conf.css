@@ -55,8 +55,16 @@ p{
 footer{
     background-color: var(--cfundo2);
     text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-    font-size: 0.9rem;
+    width: 104.08%;
+
     color: var(--ctext2);
+}
+footer p{
+    padding: 2px;
+    margin: 5px 0;
+    font-size: 0.9em;
+    line-height: 1;
+}
+strong{
+    color: var(--destaques);
 }
